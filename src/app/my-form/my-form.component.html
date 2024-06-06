@@ -1,0 +1,19 @@
+<kendo-grid [data]="gridview" (selectionChange)="onSelectionChange($event)" [selectable]="selectableSettings" [pageSize]="20" [pageable]="true" [sortable]="true" [groupable]="true" [resizable]="true">
+
+    <kendo-grid-column-group title="Employers" [columnMenu]="false">
+
+        <kendo-grid-column field="name" title="Name" [width]="220">
+        </kendo-grid-column>
+        <kendo-grid-column field="surname" title="Surname" [width]="220">
+        </kendo-grid-column>
+        <kendo-grid-column field="email" title="Email" [width]="220">
+        </kendo-grid-column>
+        <kendo-grid-column field="age" title="Age" [width]="220">
+        </kendo-grid-column>
+        <kendo-grid-column field="phone" title="Phone" [width]="220">
+        </kendo-grid-column>
+        <kendo-grid-column field="message" title="Message" [width]="220">
+        </kendo-grid-column>
+
+    </kendo-grid-column-group>
+</kendo-grid>

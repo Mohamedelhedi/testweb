@@ -1,0 +1,39 @@
+<div class="btn-group" role="group">
+    <button type="button" class="btn btn-primary" (click)="add()">Add</button>
+    <button type="button" class="btn btn-success" (click)="Save()">Save</button>
+    <button type="button" class="btn btn-danger" (click)="deletee()">Delete</button>
+</div>
+
+
+
+<form [formGroup]="form">
+    <div class="input-group">
+        <div class="col-4">
+            <label for="name">Name:</label>
+            <input type="text" id="name" formControlName="name" placeholder="enter your name">
+        </div>
+        <div class="col-4">
+            <label for="Surname">Surname:</label>
+            <input type="text" id="surname" formControlName="surname" placeholder="enter your surname">
+        </div>
+        <div class="col-4">
+            <label for="Message">Message:</label>
+            <input type="text" id="message" formControlName="message" placeholder="enter your message">
+        </div>
+
+    </div>
+
+</form>
+
+<kendo-grid [data]="gridview" (selectionChange)="onSelectionChange($event)" [selectable]="selectableSettings" [pageSize]="20" [pageable]="true" [sortable]="true" [groupable]="true" [resizable]="true">
+
+    <kendo-grid-column-group title="Employers">
+
+        <kendo-grid-column field="name" title="Name" [width]="220">
+        </kendo-grid-column>
+        <kendo-grid-column field="surname" title="Surname" [width]="220">
+        </kendo-grid-column>
+        <kendo-grid-column field="message" title="Message" [width]="220">
+        </kendo-grid-column>
+    </kendo-grid-column-group>
+</kendo-grid>
